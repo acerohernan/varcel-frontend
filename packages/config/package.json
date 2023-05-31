@@ -1,0 +1,9 @@
+{
+  "name": "@varcel/config",
+  "version": "1.0.0",
+  "description": "Set of congif files of the monorepo",
+  "scripts": {},
+  "keywords": [],
+  "author": "acerohernan",
+  "license": "MIT"
+}

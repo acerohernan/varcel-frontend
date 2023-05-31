@@ -1,0 +1,38 @@
+{
+  "name": "@varcel/ui",
+  "version": "1.0.0",
+  "description": "Set of react components to use in all the frontend apps",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "keywords": [],
+  "author": "acerohernan",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@varcel/config": "workspace:*",
+    "@babel/core": "^7.22.1",
+    "@storybook/addon-actions": "^7.0.18",
+    "@storybook/addon-essentials": "^7.0.18",
+    "@storybook/addon-interactions": "^7.0.18",
+    "@storybook/addon-links": "^7.0.18",
+    "@storybook/addon-mdx-gfm": "7.0.18",
+    "@storybook/addon-styling": "^1.0.8",
+    "@storybook/react": "^7.0.18",
+    "@storybook/react-vite": "7.0.18",
+    "@storybook/testing-library": "^0.1.0",
+    "autoprefixer": "10.4.14",
+    "babel-loader": "^8.3.0",
+    "postcss": "8.4.24",
+    "prop-types": "^15.8.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "storybook": "7.0.18"
+  },
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  }
+}

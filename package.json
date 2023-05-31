@@ -1,0 +1,22 @@
+{
+  "name": "varcel-frontend-monorepo",
+  "version": "1.0.0",
+  "description": "This is the main frontend monorepo for the vercel clone",
+  "private": true,
+  "scripts": {
+    "web": "pnpm --filter=@varcel/web",
+    "ui": "pnpm --filter=@varcel/ui"
+  },
+  "keywords": [],
+  "author": {
+    "email": "contact.acero.hernan@gmail.com",
+    "name": "acerohernan",
+    "url": "https://hacero.me"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "20.2.5",
+    "prettier": "^2.8.8",
+    "typescript": "5.0.4"
+  }
+}
