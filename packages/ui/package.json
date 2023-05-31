@@ -12,7 +12,6 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@varcel/config": "workspace:*",
     "@babel/core": "^7.22.1",
     "@storybook/addon-actions": "^7.0.18",
     "@storybook/addon-essentials": "^7.0.18",
@@ -23,6 +22,8 @@
     "@storybook/react": "^7.0.18",
     "@storybook/react-vite": "7.0.18",
     "@storybook/testing-library": "^0.1.0",
+    "@types/react": "18.2.7",
+    "@varcel/config": "workspace:*",
     "autoprefixer": "10.4.14",
     "babel-loader": "^8.3.0",
     "postcss": "8.4.24",
@@ -34,5 +35,8 @@
   "scripts": {
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.6.0"
   }
 }

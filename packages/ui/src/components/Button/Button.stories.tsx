@@ -10,6 +10,15 @@ export default meta;
 
 type Story = StoryObj<typeof Button>;
 
-export const Default: Story = {
-  args: {},
+export const Primary: Story = {
+  args: {
+    children: "Browse Marketplace",
+  },
+};
+
+export const Outlined: Story = {
+  args: {
+    children: "Browse Marketplace",
+    variant: "outlined",
+  },
 };
