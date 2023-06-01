@@ -10,7 +10,7 @@ const buttonClasses = cva("rounded-md font-base text-base focus:ring-2 ring-blac
     },
     layout: {
       default: "py-2 px-3",
-      icon: "p-3",
+      icon: "p-2",
     },
   },
   defaultVariants: {

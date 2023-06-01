@@ -1,5 +1,6 @@
-interface Params {
-    msg: string;
-}
-
-export const something = (params: Params) => console.log("Its working whiout compile", params.msg);
+export * from "./components/Button";
+export * from "./components/Card";
+export * from "./components/Input";
+export * from "./components/Menu";
+export * from "./components/Tabs";
+export * from "./components/Tooltip";

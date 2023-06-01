@@ -5,7 +5,7 @@ import { ArrowTrendingUpIcon } from "@heroicons/react/24/outline";
 
 const Card = () => {
   return (
-    <div className="border p-6 shadow-sm transition-all hover:shadow-md rounded-md cursor-pointer">
+    <div className="bg-white border p-6 shadow-sm transition-all hover:shadow-md rounded-md cursor-pointer">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <img

@@ -1,4 +1,4 @@
-import "@/styles/globals.css";
+import "@varcel/ui/src/styles/globals.css";
 import type { AppProps } from "next/app";
 import { Inter } from "next/font/google";
 

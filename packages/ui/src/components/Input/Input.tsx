@@ -26,7 +26,7 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(function Input(prop
     <>
       <div className={`${inputClasses({ variant: errorMsg ? "error" : variant })} ${full && "w-full"}`}>
         {React.isValidElement(leftIcon) && <>{leftIcon}</>}
-        <input ref={forwardedRef} className="outline-none w-full px-3 py-2" {...inputProps} />
+        <input ref={forwardedRef} className="outline-none w-full px-3 py-2 rounded-md" {...inputProps} />
         {React.isValidElement(leftIcon) && <>{rightIcon}</>}
       </div>
       <span className="block mt-1 text-sm text-red-600">{errorMsg}</span>

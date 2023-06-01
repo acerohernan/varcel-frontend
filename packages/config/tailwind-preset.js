@@ -11,6 +11,7 @@ module.exports = {
           500: "#FAFAFA",
         },
         border_gray: "#eaeaea",
+        bg_gray: "#fafafa",
       },
       fontSize: {
         base: "0.875rem",

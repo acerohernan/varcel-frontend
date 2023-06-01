@@ -6,4 +6,7 @@
   html {
     font-family: "Inter", sans-serif;
   }
+  body {
+    @apply bg-bg_gray;
+  }
 }
