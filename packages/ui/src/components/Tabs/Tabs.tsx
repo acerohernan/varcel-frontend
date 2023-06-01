@@ -13,7 +13,7 @@ const Item: React.FC<ItemProps> = ({ children, selected, ...props }) => {
   return (
     <div>
       <button
-        className={`text-base py-2 px-3 hover:bg-black/5 rounded-md mb-1 ${selected ? "text-black" : "text-gray-400"}`}
+        className={`text-base py-2 px-3 hover:bg-black/5  rounded-md mb-1 ${selected ? "text-black" : "text-gray-400"}`}
         {...props}
       >
         {children}
@@ -22,6 +22,7 @@ const Item: React.FC<ItemProps> = ({ children, selected, ...props }) => {
     </div>
   );
 };
+
 export default {
   Root,
   Item,
