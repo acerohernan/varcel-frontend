@@ -1,7 +1,7 @@
 import React from "react";
 
 const Root: React.FC<React.PropsWithChildren> = ({ children }) => {
-  return <div className="flex border-b">{children}</div>;
+  return <div className="flex border-b overflow-x-scroll no-scrollbar">{children}</div>;
 };
 
 interface ItemProps extends React.ComponentProps<"button"> {
