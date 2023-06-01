@@ -15,7 +15,7 @@ const Root: React.FC<Props> = ({ children, triggerEl }) => {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>{triggerEl}</DropdownMenu.Trigger>
       <DropdownMenu.Portal>
-        <DropdownMenu.Content className="p-2 rounded-md shadow-md" sideOffset={5}>
+        <DropdownMenu.Content className="p-2 rounded-md shadow-md bg-white mr-8" sideOffset={5}>
           {children}
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
