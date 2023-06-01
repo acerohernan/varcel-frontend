@@ -6,10 +6,10 @@ module.exports = {
     extend: {
       colors: {
         gray: {
+          300: "#e5e7eb",
           400: "#666666",
           500: "#FAFAFA",
         },
-
         border_gray: "#eaeaea",
       },
       fontSize: {

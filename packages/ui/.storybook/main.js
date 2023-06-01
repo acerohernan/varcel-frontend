@@ -4,13 +4,7 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-mdx-gfm",
-    {
-      name: "@storybook/addon-styling",
-      options: {
-        postCss: true,
-      },
-    },
+    "@storybook/addon-styling",
   ],
   framework: {
     name: "@storybook/react-vite",
