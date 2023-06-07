@@ -2,6 +2,7 @@ import React from "react";
 import { Tabs, Input, Button, Card, Menu } from "@varcel/ui";
 import {
   ArrowTopRightOnSquareIcon,
+  ChevronDownIcon,
   ChevronUpDownIcon,
   ComputerDesktopIcon,
   MagnifyingGlassIcon,
@@ -38,10 +39,10 @@ const DashboardPage = () => {
       <section>
         <div className="bg-white w-full">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-3 py-[9px] pl-4">
-              <div>
+            <div className="flex items-center gap-3 py-[9px] pl-5">
+              <Link href="/dashboard">
                 <img alt="vercel logo" src="./triangle-vercel.svg" width={30} height={30} className="m-2" />
-              </div>
+              </Link>
               <div className="w-2 h-[25px] border-l rotate-[30deg] border-border_gray" />
               <div className="flex gap-2 items-center">
                 <img
@@ -52,12 +53,15 @@ const DashboardPage = () => {
                   height={30}
                 />
                 <span className="text-base font-base">acerohernan</span>
+                <div className="rounded-xl font-base  bg-border_gray text-[12px] text-gray-400 px-2 py-[1px] hidden lg:block">
+                  Hobby
+                </div>
                 <button className="px-1 py-2 hover:bg-black/5 rounded-md">
                   <ChevronUpDownIcon className="w-5 h-5" />
                 </button>
               </div>
             </div>
-            <div className="hidden md:flex gap-4 items-center pr-4">
+            <div className="hidden md:flex gap-5 items-center pr-5">
               <Button variant="outlined">Feedback</Button>
               <Link className="text-base cursor-pointer text-gray-400 hover:text-black" href="/">
                 Changelog
@@ -72,47 +76,49 @@ const DashboardPage = () => {
                 triggerEl={
                   <button type="button">
                     <img
-                      className="w-8 h-8 rounded-full object-cover"
+                      className="w-7 h-7 rounded-full object-cover"
                       alt="avatar"
                       src="/images/avatar-placeholder.svg"
                     />
                   </button>
                 }
               >
-                <div className="px-3 py-1">
-                  <span className="text-gray-400 text-base p-2 block">contacto.acero.hernan@gmail.com</span>
-                  <Menu.Item>Dashboard</Menu.Item>
-                  <Menu.Item>Settings</Menu.Item>
-                  <Menu.Item>
-                    <div className="flex items-center justify-between">
-                      New Team
-                      <PlusIcon className="w-5 h-5" />
-                    </div>
-                  </Menu.Item>
-                  <Divisor />
-                  <Menu.Item>
-                    <div className="flex items-center justify-between">
-                      Command Menu
-                      <ComputerDesktopIcon className="w-5 h-5" />
-                    </div>
-                  </Menu.Item>
-                  <Menu.Item>
-                    <div className="flex items-center justify-between">
-                      Theme
-                      <MoonIcon className="w-5 h-5" />
-                    </div>
-                  </Menu.Item>
-                  <Divisor />
-                  <Menu.Item>
-                    <div className="flex items-center justify-between">
-                      Varcel Homepage
-                      <ArrowTopRightOnSquareIcon className="w-5 h-5" />
-                    </div>
-                  </Menu.Item>
-                  <Menu.Item>Logout</Menu.Item>
-                  <Divisor />
-                  <Button full>Upgrade to Pro</Button>
-                </div>
+                <Menu.Content className="bg-white p-2 mr-10">
+                  <div className="hidden md:block px-3 py-1">
+                    <span className="text-gray-400 text-base p-2 block">contacto.acero.hernan@gmail.com</span>
+                    <Menu.Item>Dashboard</Menu.Item>
+                    <Menu.Item>Settings</Menu.Item>
+                    <Menu.Item>
+                      <div className="flex items-center justify-between">
+                        New Team
+                        <PlusIcon className="w-5 h-5" />
+                      </div>
+                    </Menu.Item>
+                    <Divisor />
+                    <Menu.Item>
+                      <div className="flex items-center justify-between">
+                        Command Menu
+                        <ComputerDesktopIcon className="w-5 h-5" />
+                      </div>
+                    </Menu.Item>
+                    <Menu.Item>
+                      <div className="flex items-center justify-between">
+                        Theme
+                        <MoonIcon className="w-5 h-5" />
+                      </div>
+                    </Menu.Item>
+                    <Divisor />
+                    <Menu.Item>
+                      <div className="flex items-center justify-between">
+                        Varcel Homepage
+                        <ArrowTopRightOnSquareIcon className="w-5 h-5" />
+                      </div>
+                    </Menu.Item>
+                    <Menu.Item>Logout</Menu.Item>
+                    <Divisor />
+                    <Button full>Upgrade to Pro</Button>
+                  </div>
+                </Menu.Content>
               </Menu.Root>
             </div>
           </div>
@@ -147,9 +153,27 @@ const DashboardPage = () => {
                 )
               }
             />
-            <Button layout="icon">
-              <PlusIcon className="w-5 h-5" />
-            </Button>
+
+            <Menu.Root
+              triggerEl={
+                <Button layout="icon">
+                  <PlusIcon className="w-5 h-5 md:hidden" />
+                  <div className="hidden md:flex items-center justify-between w-[110px] px-1">
+                    <span className="block">Add New...</span>
+                    <ChevronDownIcon className="w-4 h-4" />
+                  </div>
+                </Button>
+              }
+            >
+              <Menu.Content className="bg-white p-2 mr-10 md:mr-0">
+                <Menu.Item>
+                  <span className="w-[95px] block">Project</span>
+                </Menu.Item>
+                <Menu.Item>Domain</Menu.Item>
+                <Menu.Item>Storage</Menu.Item>
+                <Menu.Item>Team</Menu.Item>
+              </Menu.Content>
+            </Menu.Root>
           </div>
           <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {Array(11)

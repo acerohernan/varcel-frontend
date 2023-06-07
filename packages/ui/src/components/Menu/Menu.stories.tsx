@@ -1,5 +1,5 @@
 import React from "react";
-import { Meta, StoryObj } from "@storybook/react";
+import { Meta } from "@storybook/react";
 import Menu from "./Menu";
 import { ChevronDownIcon, ExternalLinkIcon, LaptopIcon, MoonIcon, PlusIcon } from "@radix-ui/react-icons";
 import { Button } from "../Button";
@@ -17,9 +17,11 @@ export const Default = () => {
         </Button>
       }
     >
-      <Menu.Item>Profile</Menu.Item>
-      <Menu.Item>Domain</Menu.Item>
-      <Menu.Item>Settings</Menu.Item>
+      <Menu.Content className="bg-white p-2">
+        <Menu.Item>Profile</Menu.Item>
+        <Menu.Item>Domain</Menu.Item>
+        <Menu.Item>Settings</Menu.Item>
+      </Menu.Content>
     </Menu.Root>
   );
 };
@@ -39,40 +41,42 @@ export const AvatarMenu = () => {
         </button>
       }
     >
-      <div className="px-3 py-1">
-        <span className="text-gray-400 text-base p-2 block">contacto.acero.hernan@gmail.com</span>
-        <Menu.Item>Dashboard</Menu.Item>
-        <Menu.Item>Settings</Menu.Item>
-        <Menu.Item>
-          <div className="flex items-center justify-between">
-            New Team
-            <PlusIcon />
-          </div>
-        </Menu.Item>
-        <Divisor />
-        <Menu.Item>
-          <div className="flex items-center justify-between">
-            Command Menu
-            <LaptopIcon />
-          </div>
-        </Menu.Item>
-        <Menu.Item>
-          <div className="flex items-center justify-between">
-            Theme
-            <MoonIcon />
-          </div>
-        </Menu.Item>
-        <Divisor />
-        <Menu.Item>
-          <div className="flex items-center justify-between">
-            Vercel Homepage
-            <ExternalLinkIcon />
-          </div>
-        </Menu.Item>
-        <Menu.Item>Logout</Menu.Item>
-        <Divisor />
-        <Button full>Upgrade to Pro</Button>
-      </div>
+      <Menu.Content className="bg-white p-2">
+        <div className="px-3 py-1">
+          <span className="text-gray-400 text-base p-2 block">contacto.acero.hernan@gmail.com</span>
+          <Menu.Item>Dashboard</Menu.Item>
+          <Menu.Item>Settings</Menu.Item>
+          <Menu.Item>
+            <div className="flex items-center justify-between">
+              New Team
+              <PlusIcon />
+            </div>
+          </Menu.Item>
+          <Divisor />
+          <Menu.Item>
+            <div className="flex items-center justify-between">
+              Command Menu
+              <LaptopIcon />
+            </div>
+          </Menu.Item>
+          <Menu.Item>
+            <div className="flex items-center justify-between">
+              Theme
+              <MoonIcon />
+            </div>
+          </Menu.Item>
+          <Divisor />
+          <Menu.Item>
+            <div className="flex items-center justify-between">
+              Vercel Homepage
+              <ExternalLinkIcon />
+            </div>
+          </Menu.Item>
+          <Menu.Item>Logout</Menu.Item>
+          <Divisor />
+          <Button full>Upgrade to Pro</Button>
+        </div>
+      </Menu.Content>
     </Menu.Root>
   );
 };

@@ -24,10 +24,14 @@ export interface ButtonProps extends React.ComponentProps<"button">, VariantProp
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(function Button(props, forwardedRef) {
-  const { children, variant, layout, full } = props;
+  const { children, variant, layout, full, className } = props;
 
   return (
-    <button {...props} ref={forwardedRef} className={`${buttonClasses({ variant, layout })} ${full && "w-full"}`}>
+    <button
+      {...props}
+      ref={forwardedRef}
+      className={`${buttonClasses({ variant, layout, className })} ${full && "w-full"}`}
+    >
       {children}
     </button>
   );
